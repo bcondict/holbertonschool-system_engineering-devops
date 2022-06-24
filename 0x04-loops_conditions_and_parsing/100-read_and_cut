@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that display the content of the file /etc/passwd
+file=/etc/passwd
+while 
