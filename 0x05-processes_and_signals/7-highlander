@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Script that print a message indefinitely and print another if try to finish it
 
 term()
 {
