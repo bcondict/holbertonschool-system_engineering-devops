@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 # Script that print a message indefinitely and print another if try to finish it
 
-term()
-{
-    echo "I am invicible!!!"
-}
-
-trap term SIGTERM
+trap "I am invincible!!!" SIGTERM
 while :
 do
     echo "To infinity and beyond"
