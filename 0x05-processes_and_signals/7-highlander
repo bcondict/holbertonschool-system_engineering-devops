@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+term()
+{
+    echo "I am invicible!!!"
+}
+
+trap term SIGTERM
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
+
