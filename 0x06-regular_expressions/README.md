@@ -1,6 +1,7 @@
 # 0x06. Regular expression
 #### What is a Regular Expression?
 Is an Expression used regularly, duh.
+
 | Token | property | RegEx example | test |
 | {m, n} | match exact ocurrence of a char/token | a{1,3}h | ah, aah, aaah, aaaah, h, ha, aha |
 | ? | match 0 or 1 | a?h | ah, aah, aaah, aaaah, h, ha, aha |
