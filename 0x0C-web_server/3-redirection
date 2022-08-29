@@ -4,8 +4,8 @@
 
 REDIRECT="\\\trewrite ^/redirect_me  https://www.youtube.com/watch?v=mCdA4bJAGGk permanet;"
 
-sudo apt-get update -y 
-sudo apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -y nginx
 
 sudo chown -R ubuntu /var/www
