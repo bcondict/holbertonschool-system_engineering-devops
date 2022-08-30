@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Get information of each server
 
 function print_out() {
     dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf("The subdomain %s is a %s record and points to %s\n", subDomain, $4, $5)}' subDomain="$SUBDOMAIN"
