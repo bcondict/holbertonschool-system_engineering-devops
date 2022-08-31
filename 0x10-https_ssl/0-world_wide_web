@@ -5,7 +5,7 @@ function print_out() {
     dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf("The subdomain %s is a %s record and points to %s\n", subDomain, $4, $5)}' subDomain="$SUBDOMAIN"
 }
 
-if [[ -z '$2 ']]; then
+if [ -z "$2"]; then
     for sub_domain in 'www', 'lb-01', 'web-01', 'web-02'; do
         print_out "$1" "$sub_domain"
     done
