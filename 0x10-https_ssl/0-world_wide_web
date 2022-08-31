@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 # Get information of each server
 
-function print_out() {
-    dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf("The subdomain %s is a %s record and points to %s\n", subDomain, $4, $5)}' subDomain="$SUBDOMAIN"
+print_out() {
+    AR=$(dig $2.$1 | awk '/ANSWER SECTION:/{getline;print;}')
+    TY=$(echo $AR | cut -d' ' -f 4)
+    IP=$(echo $AR | cut -d' ' -f 5)
+    echo "The subdomain $2 is a $TY record and points to $IP"
 }
 
-if [ -z "$2"]; then
-    for sub_domain in 'www', 'lb-01', 'web-01', 'web-02'; do
-        print_out "$1" "$sub_domain"
-    done
+if [ $# -eq 1 ]
+then
+    print_out "$1" "www"
+    print_out "$1" "lb-01"
+    print_out "$1" "web-01"
+    print_out "$1" "web-02"
 else
-    for sub_domain in $2; do
-        print_out "$1" "$sub_domain"
-    done
+    print_out "$1" "$2"
 fi
