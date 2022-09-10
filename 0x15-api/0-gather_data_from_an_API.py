@@ -23,7 +23,7 @@ if __name__ == "__main__":
         if task['completed'] is True:
             done_task.append(task['title'])
 
-    print('Employee {}  is done with tasks ({}/{})'.format(
+    print('Employee {} is done with tasks ({}/{})'.format(
         users['name'], len(done_task), len(todos)))
 
     for task_title in done_task:
