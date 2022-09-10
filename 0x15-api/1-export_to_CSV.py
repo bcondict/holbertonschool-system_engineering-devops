@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-export data in the CSV format 
+"""
+export data in the CSV format
     - format: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
     - filename: USER_ID.csv
 """
